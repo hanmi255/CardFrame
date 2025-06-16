@@ -1,0 +1,125 @@
+[gd_scene load_steps=3 format=3 uid="uid://djyc4bgfa0vg"]
+
+[ext_resource type="Script" uid="uid://cykqa62punoik" path="res://scripts/pause_menu/pause_menu.gd" id="1_5bgjm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qcmsd"]
+
+[node name="PauseMenu" type="CanvasLayer"]
+process_mode = 3
+layer = 13
+visible = false
+script = ExtResource("1_5bgjm")
+
+[node name="Panel" type="Panel" parent="."]
+self_modulate = Color(1, 1, 1, 0.29803923)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel2" type="Panel" parent="."]
+custom_minimum_size = Vector2(500, 500)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -250.0
+offset_right = 250.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackButton" type="Button" parent="Panel2"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 54.0
+offset_right = 489.0
+offset_bottom = 138.0
+text = "返回游戏"
+
+[node name="QuickSaveButton" type="Button" parent="Panel2"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 174.0
+offset_right = 489.0
+offset_bottom = 257.0
+text = "快速保存"
+
+[node name="SaveListButton" type="Button" parent="Panel2"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 289.0
+offset_right = 493.0
+offset_bottom = 369.0
+text = "存档列表"
+
+[node name="ExitButton" type="Button" parent="Panel2"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 397.0
+offset_right = 493.0
+offset_bottom = 475.0
+text = "退出游戏"
+
+[node name="SavePanel" type="Panel" parent="."]
+visible = false
+custom_minimum_size = Vector2(500, 550)
+offset_left = 330.0
+offset_top = 47.0
+offset_right = 830.0
+offset_bottom = 597.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_qcmsd")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="SavePanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 49.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SavePanel/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="SavePanel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 24
+text = "存档列表"
+
+[node name="SaveNewButton" type="Button" parent="SavePanel"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.17600001
+anchor_top = 0.015000001
+anchor_right = -0.17600001
+anchor_bottom = 0.015000001
+offset_left = 502.0
+offset_top = -5.25
+offset_right = 542.0
+offset_bottom = 34.75
+text = "新"
+
+[node name="SaveBackButton" type="Button" parent="SavePanel"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 0
+offset_left = 458.0
+offset_top = 3.0
+offset_right = 498.0
+offset_bottom = 43.0
+text = "X"
+
+[connection signal="button_down" from="Panel2/BackButton" to="." method="_on_back_button_down"]
+[connection signal="button_down" from="Panel2/QuickSaveButton" to="." method="_on_quick_save_button_down"]
+[connection signal="button_down" from="Panel2/SaveListButton" to="." method="_on_save_list_button_down"]
+[connection signal="button_down" from="Panel2/ExitButton" to="." method="_on_exit_button_down"]
+[connection signal="button_down" from="SavePanel/SaveNewButton" to="." method="_on_save_new_button_down"]
+[connection signal="button_down" from="SavePanel/SaveBackButton" to="." method="_on_save_back_button_down"]

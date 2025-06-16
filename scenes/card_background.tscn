@@ -1,0 +1,6 @@
+[gd_scene load_steps=0 format=3 uid="uid://c6cchdd8hylgf"]
+
+[node name="cardBackGround" type="Control"]
+custom_minimum_size = Vector2(240, 340)
+layout_mode = 3
+anchors_preset = 0

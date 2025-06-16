@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://bhdn23f5lkp0l"]
+
+[node name="VFSLayer" type="CanvasLayer"]
+layer = 10

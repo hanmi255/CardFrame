@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://c2hgls06c4hed"]
+
+[ext_resource type="Script" uid="uid://tyqj8impeqcy" path="res://scripts/infos.gd" id="1_6vf27"]
+[ext_resource type="Script" uid="uid://kqvca7repw4w" path="res://scripts/option_button.gd" id="4_4es8x"]
+[ext_resource type="PackedScene" uid="uid://d2bvu85f4862p" path="res://scenes/deck/hand_deck.tscn" id="4_moqyq"]
+[ext_resource type="Script" uid="uid://c2kxbwnrpm2kp" path="res://scripts/deck/hand_deck.gd" id="5_moqyq"]
+
+[node name="Infos" type="CanvasLayer"]
+visible = false
+script = ExtResource("1_6vf27")
+
+[node name="HandDeck" parent="." instance=ExtResource("4_moqyq")]
+offset_left = 355.0
+offset_top = 722.0
+offset_right = 1920.0
+offset_bottom = 1082.0
+script = ExtResource("5_moqyq")
+
+[node name="OptionButton" type="Button" parent="."]
+offset_left = 87.0
+offset_top = 81.0
+offset_right = 259.0
+offset_bottom = 174.0
+text = "选项"
+script = ExtResource("4_4es8x")
+
+[connection signal="button_down" from="OptionButton" to="OptionButton" method="_on_option_button_down"]

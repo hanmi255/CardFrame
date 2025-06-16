@@ -1,0 +1,17 @@
+base_cardName,index,base_displayName,base_cardClass,base_description,base_price,base_cardWeight,base_maxStack,site_area,npc_schedule,food_HP
+Ice,1,冰,item,,2,1,1000,site_area,0,0
+Stone,2,石头,item,,1,1,1000,site_area,0,0
+Iron_ore,3,铁矿,ore,,10,1,1000,site_area,0,0
+Silicon_ore,4,硅矿,ore,,5,1,1000,site_area,0,0
+Magnesium_ore,5,镁矿,ore,,8,1,1000,site_area,0,0
+Nickel_ore,6,镍矿,ore,,8,1,1000,site_area,0,0
+Cobalt_ore,7,钴矿,ore,,10,1,1000,site_area,0,0
+Silver_ore,8,银矿,ore,,50,1,1000,site_area,0,0
+Gold_ore,9,金矿,ore,,20,1,1000,site_area,0,0
+Platinum_ore,10,铂矿,ore,,50,1,1000,site_area,0,0
+Uranium_ore,11,铀矿,ore,,50,1,1000,site_area,0,0
+Iron,12,铁,item,,50,1,1000,site_area,0,0
+Silicon,13,硅,item,,50,1,1000,site_area,0,0
+Magnesium,14,镁,item,,50,1,1000,site_area,0,0
+Nickel,15,镍,item,,80,1,1000,site_area,0,0
+Cobalt,16,钴,item,,80,1,1000,site_area,0,0

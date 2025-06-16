@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://li88cgsbrrmo"
+
+[deps]
+
+files=["res://assets/files/card_infos/card_info.index.translation", "res://assets/files/card_infos/card_info.base.translation", "res://assets/files/card_infos/card_info.base.translation", "res://assets/files/card_infos/card_info.base.translation", "res://assets/files/card_infos/card_info.base.translation", "res://assets/files/card_infos/card_info.base.translation", "res://assets/files/card_infos/card_info.base.translation", "res://assets/files/card_infos/card_info.site.translation", "res://assets/files/card_infos/card_info.npc.translation", "res://assets/files/card_infos/card_info.food_HP.translation"]
+
+source_file="res://assets/files/card_infos/card_info.csv"
+dest_files=["res://assets/files/card_infos/card_info.index.translation", "res://assets/files/card_infos/card_info.base.translation", "res://assets/files/card_infos/card_info.base.translation", "res://assets/files/card_infos/card_info.base.translation", "res://assets/files/card_infos/card_info.base.translation", "res://assets/files/card_infos/card_info.base.translation", "res://assets/files/card_infos/card_info.base.translation", "res://assets/files/card_infos/card_info.site.translation", "res://assets/files/card_infos/card_info.npc.translation", "res://assets/files/card_infos/card_info.food_HP.translation"]
+
+[params]
+
+compress=true
+delimiter=0

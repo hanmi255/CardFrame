@@ -1,0 +1,89 @@
+[gd_scene load_steps=4 format=3 uid="uid://dmnn6p3bgmxuq"]
+
+[ext_resource type="Script" uid="uid://b5c32hvt1mmdw" path="res://scripts/card.gd" id="1_4k7q8"]
+[ext_resource type="Texture2D" uid="uid://dtj2rr2c0f0j2" path="res://icon.svg" id="1_ivai2"]
+[ext_resource type="Theme" uid="uid://dd0mo2brs6u7" path="res://scenes/card.tres" id="2_nwofj"]
+
+[node name="Control" type="Control"]
+custom_minimum_size = Vector2(240, 340)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 240.0
+offset_bottom = 340.0
+script = ExtResource("1_4k7q8")
+
+[node name="Control" type="Panel" parent="."]
+custom_minimum_size = Vector2(220, 317)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -110.0
+offset_top = -158.5
+offset_right = 110.0
+offset_bottom = 158.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 7.5
+offset_right = -8.0
+offset_bottom = -7.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ItemImg" type="TextureRect" parent="Control/ColorRect"]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 80.0
+offset_right = 166.0
+offset_bottom = 209.0
+texture = ExtResource("1_ivai2")
+expand_mode = 1
+stretch_mode = 3
+
+[node name="name" type="Label" parent="Control/ColorRect"]
+layout_mode = 0
+offset_left = 76.0
+offset_top = 219.0
+offset_right = 126.0
+offset_bottom = 242.0
+theme_override_colors/font_color = Color(0.0253638, 0.0253638, 0.025363795, 1)
+text = "Godot"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 10.0
+offset_right = -5.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_nwofj")
+
+[node name="allButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.083000004
+anchor_bottom = 0.024
+offset_left = 22.0
+offset_top = 23.0
+offset_right = 58.079998
+offset_bottom = 50.84
+text = "x1"
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
+[connection signal="button_down" from="allButton" to="." method="_on_all_button_button_down"]
+[connection signal="button_up" from="allButton" to="." method="_on_button_button_up"]

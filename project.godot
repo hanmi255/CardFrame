@@ -1,0 +1,33 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="cardFrame"
+run/main_scene="uid://8qmmkax6sciu"
+config/features=PackedStringArray("4.4", "Forward Plus")
+config/icon="res://icon.svg"
+
+[autoload]
+
+ReadCardInfo="*res://scripts/read_card_info.gd"
+VFSLayer="*res://scenes/vfs_layer.tscn"
+Infos="*res://scenes/infos.tscn"
+PauseMenu="*res://scenes/pause_menu/pause_menu.tscn"
+
+[dotnet]
+
+project/assembly_name="cardFrame"
+
+[global_group]
+
+cardDropable=""
+cardDeck=""
+saveableDecks=""

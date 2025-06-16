@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://d2bvu85f4862p"]
+
+[node name="HandDeck" type="Panel" groups=["cardDeck", "saveableDecks"]]
+offset_right = 1565.0
+offset_bottom = 360.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CardPosDeck" type="HBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+
+[node name="CardDeck" type="Control" parent="."]
+anchors_preset = 0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = -44.0
+offset_top = 1.0
+offset_right = -3.0
+offset_bottom = 359.0
+fill_mode = 3
+
+[node name="WeightLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = -94.0
+offset_top = 2.0
+offset_right = -51.0
+offset_bottom = 25.0
+text = "0/100"
